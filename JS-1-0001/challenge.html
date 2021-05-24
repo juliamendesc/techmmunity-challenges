@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="challenge"></div>
+    <script>
+        document.getElementById("challenge");
+
+        let a = ["foo", "five", "ducks"];
+        let b = ["javascript", "python", "php"];
+        let c = ["a", "b", "c"];
+
+        function getBiggerString(array) {
+            let biggerWord;
+            
+            for (i = 0; i < array.length; i++) {
+                if (i === 0) {
+                    biggerWord = array[0];
+                } else if (biggerWord.length < array[i].length) {
+                    biggerWord = array[i];
+                }
+            };  
+            return biggerWord;
+        };
+        console.log(getBiggerString(a));
+        console.log(getBiggerString(b));
+        console.log(getBiggerString(c));
+    </script>
+</body>
+</html>
